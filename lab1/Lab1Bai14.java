@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class lab1_bai14 {
+public class Lab1Bai14 {
 
     public static void menu() {
         System.out.println("------MENU-----");

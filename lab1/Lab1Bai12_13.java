@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class lab1_Bai12_13 {
+public class Lab1Bai12_13 {
     public static int reverse(int n) {
         int p = 0;
         do {
@@ -20,20 +20,19 @@ public class lab1_Bai12_13 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        int intNum;
+        int intNum = 1235;
 
-        System.out.println("12. ");
-        System.out.printf("\tEnter a integer number: ");
-        intNum = sc.nextInt();
-        System.out.printf("\tReverse number: %d\n", reverse(intNum));
+        // Exercise 12
+        System.out.println("Exercise 12:");
+        System.out.printf("Reverse number: %d\n", reverse(intNum));
 
-        System.out.println("13. ");
-        System.out.printf("\tEnter a integer number: ");
-        intNum = sc.nextInt();
+        // Exercise 13
+        System.out.println();
+        System.out.println("Exercise 13:");
         if (isPalindrome(intNum)) {
-            System.out.printf("\t%d is palindrome ", intNum);
+            System.out.printf("%d is palindrome ", intNum);
         } else {
-            System.out.printf("\t%d is not palindrome ", intNum);
+            System.out.printf("%d is not palindrome ", intNum);
         }
         sc.close();
     }

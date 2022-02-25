@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class lab1_bai8_11 {
+public class Lab1Bai8_11 {
 
     // Exercise 8
     public static int cal1(int n) {
@@ -80,22 +80,32 @@ public class lab1_bai8_11 {
     }
 
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Input your number:");
-        int n = sc.nextInt();
+        
+        // Exercise 8
+        System.out.println("Exercise 8:");
+        int n = 15;
         System.out.println("The result of 8a) : " + cal1(n));
         System.out.println("The result of 8b) : " + cal2(n));
         System.out.println("The result of 8c) : " + cal3(n));
         System.out.println("The result of 8d) : " + cal4(n));
         System.out.println("The result of 8e) : " + cal5(n));
-        System.out.println("Input your number to make Hailstone sequence:");
-        int h = sc.nextInt();
+       
+        // Exercise 9
+        System.out.println();
+        System.out.println("Exercise 9:");
+        int h = 12;
         hailStone(h);
-        System.out.println("Input your number to sum first and last digit:");
-        int lf = sc.nextInt();
+  
+        // Exercise 10
+        System.out.println();
+        System.out.println("Exercise 10:");
+        int lf = 153;
         System.out.println("Sum of first and last digit:" + sumFirstAndLast(lf));
-        System.out.println("Input your number to count digit:");
-        int cd = sc.nextInt();
+
+        // Exercise 11
+        System.out.println();
+        System.out.println("Exercise 11:");
+        int cd = 12345;
         System.out.println("Number of digit:" + countDigit(cd));
     }
 }
