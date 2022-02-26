@@ -39,8 +39,8 @@ public class Lab1Bai3_7 {
     }
 
     // Exercise 7
-    public static boolean checkCharacter(String s) {
-        if (s.charAt(0) > 32 && s.charAt(0) < 127) {
+    public static boolean checkCharacter(char s) {
+        if ((s>='a' && s<='z')||(s>='A' && s<='Z')||(s>='0' && s<='9')) {
             return true;
         }
         return false;
@@ -78,7 +78,7 @@ public class Lab1Bai3_7 {
         System.out.println();
         // Exercise 7
         System.out.println("Exercise 7:");
-        String s = "Hello word";
+        char s = '+';
         if (checkCharacter(s)) {
             System.out.println("This is a alphanumeric");
         } else {
