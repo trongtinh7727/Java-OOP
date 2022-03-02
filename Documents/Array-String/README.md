@@ -4,7 +4,7 @@
 
     - Example:
         ```java
-        char chr[] = {'h','l','l','o'};
+        char chr[] = {'h','e','l','l','o'};
         String s = new String(chr);
         ```
         is same as:
