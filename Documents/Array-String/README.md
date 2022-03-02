@@ -24,24 +24,22 @@
         ```java
         String s = "hello";
         ```
-    - Each time you create a string literal, the JVM checks the "string constant pool" first. If the string already exists in the pool, a reference to the pooled instance is returned. If the string doesn't exist in the pool, a new string instance is created and placed in the pool.
+    - When we use double quotes to create a String, it first looks for String with the same value in the `String pool`, if found it just returns the reference else it creates a new String in the pool and then returns the reference.  
+    => Reused string, make more memory efficient
 
     - Example:
         ```java
-        String s1="Welcome";  
-        String s2="Welcome";
+        String s1="Cat";  
+        String s2="Cat";
         ```
-        ![String pool](./img/stringpool.jpg)
-
-        => Reused string, make more memory efficient
 
 - Using New Keyword
-    - As we saw above that when we tried to assign the same string object to two different literals, compiler only created one object and made both of the literals to point the same object. To overcome that approach we can create strings like this:
+    - However using new operator, we force String class to create a new String object in heap space. We can use `intern()`method to put it into the pool or refer to another String object from the string pool having the same value
 
         ```java
-        String str1 = new String("Welcome");
-        String str2 = new String("Welcome");
+        String s3 = new String("Cat");
         ```
+ ![String pool](https://www.journaldev.com/wp-content/uploads/2012/11/String-Pool-Java1.png)
 
 ## String methods
 - The java.lang.String class provides many useful methods to perform operations on sequence of char values.
@@ -59,52 +57,58 @@ public class StringDemo {
         //creat string
         String s1 = "hello";
         String s2 = "hello";
-
         String s3 = new String("hello"); 
-
         char chr []= {' ','w','o','l','d'};
-        String s4 = new String(chr);
+        String s4 = new String(chr); // convert char array to String
         
+        //print string
         System.out.println("S1: "+s1);
         System.out.println("S2: "+s2);
         System.out.println("S3: "+s3);
         System.out.println("S4: "+s4);
 
+        //compare string
         System.out.printf("S1 = S2: %b\n",s1 == s2);
         System.out.printf("S1 = S3: %b\n",s1 == s3);
+        System.out.printf("S1 equal S3: %b\n",s1.equals(s3));
+        
 
-
-        // CONTAT
+        // CONTAT()
         System.out.println("Contcat:");
-
         String s = s1.concat(s4);
         System.out.println("s1.concat(s4) = " + s);
         
-        // INDEXOF
+        //Substring()
+        String substr = s.substring(5);
+        System.out.println("substr =" + substr);
+
+        // INDEXOF()
         System.out.println();
         System.out.println("IndexOf:");
         String str = "This is text";
-   
         int idx = str.indexOf('i');
         System.out.println("- indexOf('i') = " + idx);
-     
         idx = str.indexOf("te");
         System.out.println("- indexOf(\"te\") = " + idx);
 
     }
 }
+
 ```
 
 **Output**
 ```
+
 S1: hello
 S2: hello
 S3: hello
 S4:  wold
 S1 = S2: true
 S1 = S3: false
+S1 equal S3: true
 Contcat:
 s1.concat(s4) = hello wold
+substr = wold
 
 IndexOf:
 - indexOf('i') = 2
