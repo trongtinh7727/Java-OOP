@@ -6,6 +6,7 @@ public class StringDemo {
         String s1 = "hello";
         String s2 = "hello";
         String s3 = new String("hello"); 
+
         char chr []= {' ','w','o','l','d'};
         String s4 = new String(chr); // convert char array to String
         
@@ -16,11 +17,11 @@ public class StringDemo {
         System.out.println("S4: "+s4);
 
         //compare string
-        System.out.printf("S1 = S2: %b\n",s1 == s2);
-        System.out.printf("S1 = S3: %b\n",s1 == s3);
+        System.out.printf("S1 = S2: %b\n",s1 == s2); //true
+        System.out.printf("S1 = S3: %b\n",s1 == s3); //false
         System.out.printf("S1 equal S3: %b\n",s1.equals(s3));
         
-
+        
         // CONTAT()
         System.out.println("Contcat:");
         String s = s1.concat(s4);
