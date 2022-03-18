@@ -83,7 +83,13 @@ public class Lab3Bai1 {
         if (arr.length == 0) {
             return null;
         }
-        int c = 1, count = 0;
+        int c = 1, count = 0,zero = -1 ;
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] == 0) {
+                c++;
+                zero = i;
+            }
+        }
 
         for (int i = 0; i < arr.length - 1; i++) {
             if (arr[i] != 0) {
@@ -96,10 +102,14 @@ public class Lab3Bai1 {
             }
         }
 
-        int[] res = new int[count];
+        if (c == 2) {
+            count ++;
+        }
+        int[] res = new int[count + 1];
         res[0] = arr[0];
+        c = 1;
         for (int i = 1; i < arr.length; i++) {
-            if (arr[i] != 0) {
+            if (arr[i] != 0 || i == zero) {
                 res[c++] = arr[i];
             }
         }
@@ -107,8 +117,8 @@ public class Lab3Bai1 {
     }
 
     public static void main(String[] args) {
-        int[] arr = { 5, 2, 3, 5, 5, 5, 0, 1, 3 };
-        int n = arr.length;
+        int[] arr = { 5, 2, 7, 5, 0, 5, 0, 1, 3 };
+        int n = arr.length + 1;
         // Remove the first specific element
         System.out.println("Remove the first specific element");
         if (rmFirst(arr, 2)) {
@@ -129,8 +139,9 @@ public class Lab3Bai1 {
 
         // Find the duplicate values of an array
         System.out.println("Remove the duplicate values of an array:");
-        printArr(arr, n);
-        int removeArr[] = rmDuplicate(arr);
+        int[] narr = { 5, 2, 7, 5, 5, 0, 4, 1, 3 };
+        printArr(narr, n);
+        int removeArr[] = rmDuplicate(narr);
         printArr(removeArr, removeArr.length);
     }
 
