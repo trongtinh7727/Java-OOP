@@ -29,3 +29,8 @@
 - Tính đa hình ở đây được hiểu là đa hình thái, ví dụ cùng 1 method nhưng tùy vào tham số truyền vào hoặc cài đặt ở lớp con mà nó thực hiện các phép toán khác nhau.
 
 - Vd: oeverloading
+
+# Contructor 
+- Default Constructor
+- Parameterized Constructor
+- Copy Constructor
