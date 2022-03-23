@@ -9,10 +9,8 @@
 `packege`: nhóm các lớp có cùng điểm chung
 
 # Method
-- Có 3 loại:
-    - static (class) method: không cần khởi tạo đối tượng, sử dụng trực tiếp tê class để truy xuất đến.
-    - non-static (instance/object) method: cần khởi tạo 1 đối tượng, truy xuất đén method thong qa đối tượng đó
-    - contructor method: một phương thức đặc biệt để khởi tạo 1 đối tướng
+- Accessor: để truy cập (truy xuất) các giá trị của các thuộc tính
+- Mutator: để thay đổi (sửa đổi) các giá trị của thuộc tính
 
 # Class
 - service class: cung cấp các dịch vụ chức năng cho client class, bao gồm các thuộc tính và method
