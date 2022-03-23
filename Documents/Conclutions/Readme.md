@@ -24,7 +24,7 @@
 - Sử dụng lại các thuộc tính, method sẵn có từ các class khác mà không phải xây dựng từ đầu.
 # Abstract - Tính trừu tượng
 - Từ mô tả, ta tự định nghĩa ra các thuộc tính, method của đối tượng
-- Vd: overiding
+- Vd: overriding
 # Polymorphism - Tính đa hình
 - Tính đa hình ở đây được hiểu là đa hình thái, ví dụ cùng 1 method nhưng tùy vào tham số truyền vào hoặc cài đặt ở lớp con mà nó thực hiện các phép toán khác nhau.
 
