@@ -34,6 +34,13 @@
 - Parameterized Constructor
 - Copy Constructor
 
+# Super
+- Dùng khởi tạo contructor của subclass thông qua contructor của superclass
+- Dùng để gọi cái phương thức của superclass gần nhất
+
+# Overriding
+- Định nghĩa lại phương thức trong qúa trình phát triển
+
 # Ví dụ
 
 - Tạo ra 1  abstract class Animal có tên và phương thức say(),abstract class này thể hiện tính trừu tượng, có nghĩa ta định ra rằng dù là con vật gì đi nữa thì nó cũng có phương thức say().
