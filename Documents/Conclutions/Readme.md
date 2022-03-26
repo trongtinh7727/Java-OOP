@@ -23,12 +23,11 @@
 - Sử dụng lại các thuộc tính, method sẵn có từ các class khác mà không phải xây dựng từ đầu.
 # Abstract - Tính trừu tượng
 - Từ mô tả, ta tự định nghĩa ra các thuộc tính, method của đối tượng
-- Vd: overriding
+
 # Polymorphism - Tính đa hình
 - Tính đa hình ở đây được hiểu là đa hình thái, ví dụ cùng 1 method nhưng tùy vào tham số truyền vào hoặc cài đặt ở lớp con mà nó thực hiện các phép toán khác nhau.
 
-- Vd: oeverloading
-
+- Vd: oeverloading, overriding
 # Contructor 
 - Default Constructor
 - Parameterized Constructor
@@ -42,6 +41,8 @@
 - Định nghĩa lại phương thức trong qúa trình phát triển
 
 # Ví dụ
+
+![](https://niithanoi.edu.vn/pic/Product/images/tutorials/vi-du-ve-abstraction-trong-lap-trinh-huong-doi-tuong-trong-java-1.jpg)
 
 - Tạo ra 1  abstract class Animal có tên và phương thức say(),abstract class này thể hiện tính trừu tượng, có nghĩa ta định ra rằng dù là con vật gì đi nữa thì nó cũng có phương thức say().
 - Tạo 2 lớp cat và dog kế thừa từ lớp animal, sau đó định nghĩa lại phương thước say() trong cat và dog. Điều này thể hiện tính kế thừa(cat và dog đều có đặc điểm chung là say()), đóng gói (đóng gói biến tên và phương thức say() với nhau ), tính đa hình(cùng một phương thức say() nhưng mỗi con vật lại có cách kêu khác nhau)
