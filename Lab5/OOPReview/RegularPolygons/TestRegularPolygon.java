@@ -1,6 +1,5 @@
-import javax.sql.rowset.spi.SyncResolver;
 
-public class TestRegular {
+public class TestRegularPolygon {
     public static void main(String[] args) {
         RegularPolygon tamgiac = new RegularPolygon("Tam giac", 3, 3.5);
         System.out.printf("Edge Amount: %d\nLength: %f\n",tamgiac.getEdgeAmount(),tamgiac.getEdgeLength());
