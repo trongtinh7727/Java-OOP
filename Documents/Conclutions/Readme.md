@@ -34,6 +34,7 @@
 - Lớp con sẽ kế thừa toàn bộ thuộc tính có phạm vi truy cập từ protected của lớp cha.
 - Sử dụng từ khóa final để chặn kế thừa.
 # Abstract - Tính trừu tượng
+- Tập trung vào việc đối tượng muốn làm gì chứ không tập trung vào cách nó thực hiện
 - Là quá trình ẩn đi những thứ phức tạp và chỉ hiển thị ra nhưng thông tin cần thiết cho user
 - Cách để đạt tính trừu tượng:
     - Trừu tượng 1 phần (0-100%): `abstract class`
@@ -44,9 +45,11 @@
     - Dễ dàng bảo trì
 
 - Interface: 
+    - Xác định các hành vi thông dụng cho 1 tập các lớp
+    - Một nhóm các `method` liên quan với nhau
     - Khai báo bằng từ khóa `interface`
     - Không phải là 1 lớp
-    - Chỉ bao gồm các phương thức trừu tượng
+    - Dùng từ khóa `implements` để triển khai interface trong class
 
 - Abstract class:
     - sử dụng từ khóa `abstract` để khai báo 1 lớp trừu tượng
