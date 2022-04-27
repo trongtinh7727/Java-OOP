@@ -25,6 +25,39 @@
 - service class: cung cấp các dịch vụ chức năng cho client class, bao gồm các thuộc tính và method
 - client class: phải có main method, sử dụng các dịch vụ do service class cung cấp
 
+# Static
+ - A static method means that it can be accessed without creating an object of the class, unlike public:
+    - An example to demonstrate the differences between static and public methods:
+        
+        ```java 
+            public class Main {
+                // Static method
+                static void myStaticMethod() {
+                    System.out.println("Static methods can be called without creating objects");
+                }
+
+                // Public method
+                public void myPublicMethod() {
+                    System.out.println("Public methods must be called by creating objects");
+                }
+
+                // Main method
+                public static void main(String[] args) {
+                    myStaticMethod(); // Call the static method
+
+                    Main myObj = new Main(); // Create an object of MyClass
+                    myObj.myPublicMethod(); // Call the public method
+                }
+            }
+        ```
+# Final:
+- `final class`: 
+    - Không thể extend `final class`
+
+- `final method`:
+    - Không thể `override` 
+    - Vẫn có thể `overload` 
+
 # Encapsulation - Tính đóng gói
 - Đóng gói ở đây là đóng gói các biến, method thành các class; đóng gói các class thành 1 package…
 - Giúp che giấu thông tin, đảm bảo sự toàn vẹn dữ liệu, bảo vệ đối tượng không bị truy cập từ code bên ngoài vào để thay để giá trị các thuộc tính hay có thể truy cập trực tiếp.
@@ -33,6 +66,7 @@
 - Sử dụng từ khóa extends.
 - Lớp con sẽ kế thừa toàn bộ thuộc tính có phạm vi truy cập từ protected của lớp cha.
 - Sử dụng từ khóa final để chặn kế thừa.
+- VD: con cái kế thừa màu da, màu tóc từ ba mẹ
 # Abstract - Tính trừu tượng
 - Tập trung vào việc đối tượng muốn làm gì chứ không tập trung vào cách nó thực hiện
 - Là quá trình ẩn đi những thứ phức tạp và chỉ hiển thị ra nhưng thông tin cần thiết cho user
@@ -67,11 +101,32 @@
 # Polymorphism - Tính đa hình
 - Tính đa hình ở đây được hiểu là đa hình thái, ví dụ cùng 1 method nhưng tùy vào tham số truyền vào hoặc cài đặt ở lớp con mà nó thực hiện các phép toán khác nhau.
 
-- Vd: oeverloading, overriding
+- Vd: oeverloading, overriding,.....
 # Contructor 
-- Default Constructor
+- Default Constructor:
+    - Không có đối số
+    - Được java complier khởi tạo mặc định
+    - VD:
+        ```java
+        public Person(){
+            //code....
+        }
+        ```
 - Parameterized Constructor
-- Copy Constructor
+    - Có ít nhất 1 đối số truyền vào
+    - Vd: 
+        ```java
+        public Person(String name){
+            this.name = name;
+        }
+        ```
+- Copy Constructor: là trường hợp đặc biệt của Parameterized Constructor khi đối số truyền vào là 1 `object`:
+    - VD:
+        ```java 
+        public Person(Person a){
+            //code
+        }
+        ```
 
 # Super
 - Dùng khởi tạo contructor của subclass thông qua contructor của superclass
