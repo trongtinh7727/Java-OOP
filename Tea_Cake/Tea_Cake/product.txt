@@ -1,0 +1,8 @@
+D01,Ep tao,26000,500
+D02,Ep cam,26000,500
+D03,Caffe,18000,500
+D04,Tra dao,26000,500
+D05,Tra Phuc Long,30000,500
+T01,Banh bong lan,2000,500
+T02,Banh plan,2000,200
+T03,Banh ngot,5000,200
